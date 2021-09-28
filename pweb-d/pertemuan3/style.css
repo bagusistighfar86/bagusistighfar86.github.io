@@ -1,0 +1,181 @@
+@import url(reset.css);
+body{
+    background-image: url(gambar/bg.jpeg);
+}
+
+.container {
+    /* background-color: salmon; */
+    margin : 50px auto;
+    width : 75%;
+}
+
+header .logo img {
+    width: 80px;
+    margin-left: 20px;
+}
+
+header .logo {
+    border-radius: 50px 50px 0 0;
+    padding: 20px;
+    background-color: black;
+    box-sizing: border-box;
+}
+
+nav {
+    position: relative;
+    height: 370px;
+    background-image:   linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 1) 100%),
+                        url(gambar/heroimage.jpg);
+    background-size: cover;
+    background-position: 0, 0 -200px;
+    border-top: 5px solid salmon;
+}
+
+nav p {  
+    font-size: 100px;
+    font-weight: bold;
+    width: 100%;
+    position : absolute;
+    bottom: 40%;
+    /* left: 50%; */
+    text-align: center;
+    color: #eaeaea;
+    font-size: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav ul li a {
+    font-family: 'CALIBRI';
+    font-size: 30px;
+    text-decoration: none;
+    color: #eaeaea;
+}
+
+nav ul li {
+    display : inline-block; 
+    padding: 0 15px;
+    margin-top: 320px;
+    margin-left: 20px;
+}
+
+nav a:hover {  
+    color: #985d6a;
+}
+
+section.content {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    width: 70%;
+    background-color: #000000;
+    border-right: 1px solid #eaeaea;
+}
+
+.youtube{
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+article {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: auto;
+    width: 100%;
+}
+ 
+hgroup {
+    margin-top: 40px;
+}
+
+article hgroup h2 {
+    color: white;
+    font-size: 50px;
+}
+
+article hgroup h3 {
+    margin-top: 10px;
+    color: #19aa92;
+    font-size: 35px;
+}
+
+article p {
+    color: #eaeaea;
+    margin-top: 25px;
+    margin-right: 25px;
+    font-size: 20px;
+}
+
+figure {
+    background-size: cover;
+    float: left;
+    width: 290px;
+    height: 220px;
+    padding: 5px;
+    margin: 20px 50px;
+    border-radius: 20px;
+}
+
+.SotoBetawi figure {
+    background-image: url(gambar/soto\ betawi.jpg);
+}
+.NasiJagung figure {
+    background-image: url(gambar/nasi\ jagung.jpg);
+}
+.Rujak figure {
+    background-image: url(gambar/rujak.jpg);
+}
+
+aside {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    float: right;
+    width: 30%;
+    font-size: 20px;
+    color: white;
+}
+ 
+aside section a{
+    display: block;
+    padding:10px 0;
+    border-bottom: 1px solid #eeeeee;
+    color: #ffffff;
+    text-decoration: none;
+}
+ 
+aside section a:hover {
+    color: #985d6a;
+    background-color: #efefef;
+}
+
+aside section{
+    padding: 30px 30px 30px 30px;
+    
+}
+
+aside h2{
+    margin: 15px 0;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+aside table{
+    margin: 15px 0;
+}
+
+aside table,tr,td{
+    padding: 10px 10px 10px 0;
+}
+
+div.content{
+    background-color: #000000;
+    overflow: hidden;
+}
+
+.footer .copyright{
+    background-color: salmon;
+    color: white;
+    padding: 20px;
+}
+
+.footer p{
+    font-size: 18px;
+    color: black;
+    text-align: center;
+}   
