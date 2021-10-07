@@ -373,6 +373,12 @@ function main(){
     var aColor = gl.getAttribLocation(shaderProgram, "aColor");
     gl.vertexAttribPointer(aColor, 3, gl.FLOAT, false, 5*Float32Array.BYTES_PER_ELEMENT, 2*Float32Array.BYTES_PER_ELEMENT);
     gl.enableVertexAttribArray(aColor);
+    
+    var freeze = false;
+    function onMouseClick(event){
+        freeze = !freeze;
+    }
+    document.addEventListener("click", onMouseClick);
 
     var speed = 0.0049;
     var change_y = 0;
@@ -380,15 +386,17 @@ function main(){
     const uTranslate = gl.getUniformLocation(shaderProgram, 'uTranslate');
     
     function render() {
-        // control the bouncing y position range
-        if (change_y >= 0.75 || change_y <= -0.75) speed = -speed;
-		change_y += speed;
+        if(!freeze){
+            // control the bouncing y position range
+            if (change_y >= 0.75 || change_y <= -0.75) speed = -speed;
+            change_y += speed;
+        }
 
         const rightPosition = [
-                1.0, 0.0, 0.0, 0.0,
-                0.0, 1.0, 0.0, 0.0,
-                0.0, 0.0, 1.0, 0.0,
-                0, change_y, 0.0, 1.0,
+            1.0, 0.0, 0.0, 0.0,
+            0.0, 1.0, 0.0, 0.0,
+            0.0, 0.0, 1.0, 0.0,
+            0, change_y, 0.0, 1.0,
         ]
 
         const leftPosition = [
@@ -401,9 +409,8 @@ function main(){
         gl.uniformMatrix4fv(uTranslate, false, leftPosition);
         gl.drawArrays(gl.TRIANGLES, 0, leftVertices.length/5);
 
-		gl.uniformMatrix4fv(uTranslate, false, rightPosition);
+        gl.uniformMatrix4fv(uTranslate, false, rightPosition);
         gl.drawArrays(gl.TRIANGLES, leftVertices.length/5, rightVertices.length/5);
-            
         requestAnimationFrame(render);
     }
     render();
