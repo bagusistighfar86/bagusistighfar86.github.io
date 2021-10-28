@@ -1,0 +1,183 @@
+@import url(reset.css);
+@import url(clearfix.css);
+
+* {box-sizing: border-box;}
+
+body{
+    background-color: #F6F6F6;
+}
+
+.header{
+    position: fixed;
+    height: 75px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(115,190,222);
+    background: linear-gradient(132deg, rgba(115,190,222,1) 0%, rgba(50,45,125,1) 50%, rgba(0,0,0,1) 100%);
+    z-index: 9999;
+}
+
+.header img{
+    width:60px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.header p{
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    transform: translateY(-50%);
+    color: white;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.side-form{
+    background-image: url(gambar/side-box-form.png);
+    background-size: 650px;
+    background-repeat: no-repeat;
+    background-position-x: -126px;
+    background-position-y: -46px;
+    float: left;
+    height: 550px;
+    width: 400px;
+    box-shadow: 90px 30px 20px -30px black;
+}
+
+.box-form{
+    float: left;
+    background-color: white;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    height: 550px;
+    border-radius: 0 25px 25px 0;
+    box-shadow: 30px 30px 20px -30px black;
+    
+}
+
+.form{
+    position: relative;
+    /* background-color: salmon; */
+}
+
+form{
+    margin: auto;
+    /* background-color: salmon; */
+    font-family: 'Roboto';
+    height: 500px;
+    width: fit-content;
+}
+
+form h1{
+    font-family: 'Roboto';
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+
+table,th,td{
+    font-size: 15px;
+    margin: 25px auto;
+    /* border: 1px solid salmon; */
+    
+}
+
+td{
+    padding-top: 20px;
+}
+
+td label{
+    padding-right: 25px;
+}
+
+input{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 50px;
+    padding-left: 15px;
+    background-color: #F5F8F9;
+}
+
+input:focus , select:focus{
+    background-color: white;
+}
+
+input.alamat{
+    padding-bottom: 75px;
+}
+
+select{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #F5F8F9;
+}
+
+select.jurusan{
+    padding-right: 5px;
+    padding-left: 15px;
+}
+
+select.status{
+    padding-right: 65px;
+    padding-left: 15px;
+}
+
+.footer{
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(115,190,222);
+    background: linear-gradient(132deg, rgba(115,190,222,1) 0%, rgba(50,45,125,1) 50%, rgba(0,0,0,1) 100%);
+    z-index: 9999;
+}
+
+.footer p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Roboto';
+    font-size: 12px;
+}
+
+input, select{
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px -2px  black;
+}
+
+.btn {
+    background-color: #24a0ed;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    /* opacity: 1; */
+    transition: 0.3s;
+  }
+  
+  .btn:hover {opacity: 0.6}
+
+  .td-btn{
+    /* display:block;
+    margin-left: 64%; */
+    text-align: right;
+  }
