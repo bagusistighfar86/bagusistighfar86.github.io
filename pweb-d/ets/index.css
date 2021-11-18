@@ -161,6 +161,8 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+a { color: inherit; } 
+
 .nav-item .nav-line .line {
   display: none;
 }
