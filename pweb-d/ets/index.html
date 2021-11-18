@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto 2000</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- j-query -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fw-bold shadow-sm sticky-top pb-3" style="z-index: 99999">
+      <div class="container position-relative">
+        <a class="navbar-brand position-absolute" href="index.html" style="font-size: 3.2rem"><img src="img/auto2000-logo.png" alt="" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto align-items-end list" style="font-size: 2rem">
+            <li class="nav-item pe-lg-5 pe-sm-2 pe-3 home">
+              <div class="item-nav row">
+                <a class="nav-link" aria-current="page" href="#" style="color: #212121">Home</a>
+              </div>
+              <div class="row-active">
+                <div class="line" style="background-color: rgb(21, 21, 21); width: 100%; height: 5px; border-radius: 8px"></div>
+              </div>
+            </li>
+            <li class="nav-item pe-lg-5 pe-sm-2 pe-3 order">
+              <div class="item-nav row">
+                <a class="nav-link beli" href="#beli" style="color: #212121">Beli</a>
+              </div>
+              <div class="nav-line row">
+                <div class="line" style="background-color: black; width: 100%; height: 5px; border-radius: 8px"></div>
+              </div>
+            </li>
+            <li class="nav-item pe-lg-5 pe-sm-2 pe-3 portfolio">
+              <div class="item-nav row">
+                <a class="nav-link services" href="#service" style="color: #212121">Service</a>
+              </div>
+              <div class="nav-line row">
+                <div class="line" style="background-color: black; width: 100%; height: 5px; border-radius: 8px"></div>
+              </div>
+            </li>
+            <li class="nav-item pe-lg-5 pe-sm-2 pe-3 blog">
+              <div class="row">
+                <a class="nav-link contact" href="#contact" style="color: #212121">Contact Us</a>
+              </div>
+              <div class="nav-line row">
+                <div class="line" style="background-color: black; width: 100%; height: 5px; border-radius: 8px"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- jumbotron 1-->
+    <section class="jumbotron text-center pt-5 text-white">
+      <div class="container-fluid">
+        <h1 class="pt-5" style="font-size: 7rem"><strong>AUTO2000</strong></h1>
+        <div class="row justify-content-center pt-4">
+          <div class="col-xxl-5 col-lg-7 col-8">
+            <p class="fs-1 fw-bold" style="letter-spacing: 2px">Buy, service, and enjoy your car with us</p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="row bg-dark overflow-visible position-absolute d-flex" style="width: 50%; z-index: 99"></div> -->
+
+      <div class="row pt-4 justify-content-center position-absolute" style="left: 0; right: 0; margin-left: -45px">
+        <div class="col-lg-12 col-9 d-md-block d-none hover14">
+          <img class="img-fluid" src="img/slide-jumbotron.png" alt="" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1" d="M0,96L120,133.3C240,171,480,245,720,240C960,235,1200,149,1320,106.7L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+          </svg>
+        </div>
+      </div>
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="">
+        <path fill="#000b76" fill-opacity="1" d="M0,96L120,133.3C240,171,480,245,720,240C960,235,1200,149,1320,106.7L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+    </svg> -->
+    </section>
+    <!-- end jumbotron 1-->
+
+    <!-- kategori -->
+    <section id="service" class="kategori text-center text-white position-relative" style="margin-top: 300px; background-color: #ff5353">
+      <div class="container" style="padding-top: 100px">
+        <h1 class="fw-bold" style="font-size: 4rem">Kategori Pilihan</h1>
+        <div class="row justify-content-center mt-5">
+          <div class="col-lg-4 col-md-6 col-8">
+            <h2 class="fw-bold" style="font-size: 2rem; letter-spacing: 1px">Nikmati barbagai macam fitur yang disediakan oleh AUTO2000</h2>
+          </div>
+        </div>
+        <div class="row p-0 justify-content-center ps-5" style="margin-top: 50px">
+          <div class="col-kategori me-5 mb-5 text-black" style="width: 150px; height: 210px">
+            <div class="card-kategori bg-white overflow-visible" style="border-radius: 15px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px">
+              <img class="img-kategori" src="img/car-vector.png" alt="" style="margin-top: 30%" />
+              <p class="fw-bold fs-3 mt-4">Beli Mobil</p>
+            </div>
+          </div>
+          <div class="col-kategori me-5 mb-5 text-black" style="width: 150px; height: 210px">
+            <div class="card-kategori bg-white overflow-visible" style="border-radius: 15px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px">
+              <img class="img-kategori" src="img/service-vector.png" alt="" style="margin-top: 15%" />
+              <p class="fw-bold fs-3 mt-4">Service Mobil</p>
+            </div>
+          </div>
+          <div class="col-kategori me-5 mb-5 col-12 text-black" style="width: 150px; height: 210px">
+            <div class="card-kategori bg-white overflow-visible" style="border-radius: 15px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px">
+              <img class="img-kategori" src="img/ask-vector.png" alt="" style="margin-top: 20%" />
+              <p class="fw-bold fs-3 mt-1">Hubungi Kami</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 0px">
+        <div class="col-12">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#ffffff"
+              fill-opacity="1"
+              d="M0,192L80,165.3C160,139,320,85,480,85.3C640,85,800,139,960,149.3C1120,160,1280,128,1360,112L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </section>
+    <!-- end kategori-->
+
+    <!-- rekomendasi -->
+    <section id="beli" class="rekomendasi text-center text-black position-relative" style="margin-top: -100px">
+      <div class="container" style="padding-top: 100px">
+        <h1 class="fw-bold" style="font-size: 4rem">Rekomendasi Mobil</h1>
+        <div class="row justify-content-center mt-5">
+          <div class="col-lg-3 col-md-6 col-8">
+            <h2 class="fw-bold" style="font-size: 2rem; letter-spacing: 1px">Telusuri lebih dalam mobil yang sedang trending</h2>
+          </div>
+        </div>
+        <div class="row p-0 justify-content-center ps-5" style="margin-top: 50px">
+          <div class="col-rekom col-xl-3 col-lg-4 col-md-5 col-sm-5 col-6 me-5 mb-5 position-relative text-black">
+            <div class="button"><a href="#belimobil" class="btn btn-primary fw-bold" style="font-size: 1.6rem">Beli Mobil</a></div>
+            <div class="card-rekomendasi bg-white overflow-visible" style="border-radius: 15px; height: 260px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px">
+              <img class="img-rekomendasi pt-2" src="img/alphard.png" alt="" style="width: 100%" />
+              <p class="fs-1 pt-3"><strong>Alphard</strong></p>
+              <p class="fs-2" style="margin-top: -10px">Rp <strong>1.750.000.000</strong></p>
+            </div>
+          </div>
+          <div class="col-rekom col-xl-3 col-lg-4 col-md-5 col-sm-5 col-6 me-5 mb-5 position-relative text-black">
+            <div class="button"><a href="#belimobil" class="btn btn-primary fw-bold" style="font-size: 1.6rem">Beli Mobil</a></div>
+            <div class="card-rekomendasi bg-white overflow-visible" style="border-radius: 15px; height: 260px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px">
+              <img class="img-rekomendasi pt-3" src="img/corolla.png" alt="" style="width: 100%" />
+              <p class="fs-1 pt-3"><strong>Corolla Cross</strong></p>
+              <p class="fs-2" style="margin-top: -10px">Rp <strong>450.000.000</strong></p>
+            </div>
+          </div>
+          <div class="col-rekom col-xl-3 col-lg-4 col-md-5 col-sm-5 col-6 me-5 mb-5 position-relative text-black">
+            <div class="button"><a href="#belimobil" class="btn btn-primary fw-bold" style="font-size: 1.6rem">Beli Mobil</a></div>
+            <div class="card-rekomendasi bg-white overflow-visible" style="border-radius: 15px; height: 260px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px">
+              <img class="img-rekomendasi pt-2" src="img/avanza.png" alt="" style="width: 100%" />
+              <p class="fs-1 pt-3"><strong>Avanza</strong></p>
+              <p class="fs-2" style="margin-top: -10px">Rp <strong>250.000.000</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <div class="col-sm-5 col-12">
+            <button type="button" class="btn btn-light p-3 ps-5 pe-5 text-white mt-5 fw-bold" style="background-color: #ff5353; font-size: 1.6rem">Mobil Lainnya</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end rekomendasi-->
+
+    <!-- kemudahan -->
+    <section class="kemudahan text-center text-black" style="margin-top: 0px">
+      <div class="container" style="padding-top: 100px">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-8">
+            <h1 class="fw-bold" style="font-size: 5rem">Kemudahan Service Mobil di <span style="color: #ff3636">Auto2000</span></h1>
+          </div>
+        </div>
+
+        <div class="row p-0 justify-content-center ps-5" style="margin-top: 50px">
+          <div class="col-kemudahan col-xxl-3 me-xxl-5 col-xl-4 col-lg-5 col-md-6 col-8 text-black pb-5 position-relative" style="background-image: url(img/test-drive.png); background-repeat: no-repeat; height: 310px">
+            <div class="row-text pt-4 pb-4 row text-white text-start position-absolute" style="bottom: 3%">
+              <div class="col-test col-9 ps-5 align-items-end">
+                <p class="" style="font-size: 2.5rem"><strong>Test Drive</strong></p>
+              </div>
+              <div class="col-test col-3">
+                <i class="bi bi-chevron-right" style="font-size: 2.5rem"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-kemudahan col-xxl-3 me-xxl-5 col-xl-4 col-lg-5 col-md-6 col-8 text-black pb-5 position-relative" style="background-image: url(img/booking-servis.png); background-repeat: no-repeat; height: 310px">
+            <div class="row-text pt-4 pb-4 row text-white text-start position-absolute" style="bottom: 3%">
+              <div class="col-book col-10 ps-5 align-items-end">
+                <p class="" style="font-size: 2.5rem"><strong>Booking Servis</strong></p>
+              </div>
+              <div class="col-book col-2">
+                <i class="bi bi-chevron-right" style="font-size: 2.5rem"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-kemudahan col-xxl-3 me-xxl-5 col-xl-4 col-lg-5 col-md-6 col-8 text-black pb-5 position-relative" style="background-image: url(img/aksesories.png); background-repeat: no-repeat; height: 310px">
+            <div class="row-text pt-4 pb-4 row text-white text-start position-absolute" style="bottom: 3%">
+              <div class="col-acs col-9 ps-5 align-items-end">
+                <p class="" style="font-size: 2.5rem"><strong>Aksesoris</strong></p>
+              </div>
+              <div class="col-acs col-3">
+                <i class="bi bi-chevron-right" style="font-size: 2.5rem"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <div class="col-sm-5 col-12">
+            <button type="button" class="btn btn-light p-3 ps-5 pe-5 text-white mt-5 fw-bold" style="background-color: #ff5353; font-size: 1.6rem">Kemudahan Lainnya</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end kemudahan-->
+
+    <!-- contact us -->
+    <div id="contact" class="container contact-us text-center" style="margin-top: 100px; padding: 0; background-image: url(img/bg-contact.png); background-repeat: no-repeat; background-size: cover; background-position: center">
+      <div class="row row-hubungi">
+        <h1 class="text-white fw-bold" style="font-size: 4rem">Hubungi Kami</h1>
+      </div>
+      <div class="row justify-content-center position-relative d-md-flex d-none" style="margin-top: 50px">
+        <div class="col-4 blue-contact position-absolute text-white">
+          <div class="blue-box" style="background-color: #ff5353; border-radius: 10px; width: 333px; height: 387px">
+            <div class="row ps-5">
+              <div class="col-12 mt-5 ps-4 text-start">
+                <h2>Informasi Kontak</h2>
+              </div>
+            </div>
+            <div class="row mb-2 fs-4 text-center justify-content-center" style="margin-top: 30px">
+              <div class="col-2 pt-2"><img src="img/loc-white-icon.png" alt="" /></div>
+              <div class="col-8 text-start">
+                <p>Jl. Kenjeran No.522-524, Kalijudan, Kec. Mulyorejo, Kota SBY, Jawa Timur 60114</p>
+              </div>
+            </div>
+            <div class="row mt-4 mb-2 fs-4 text-center justify-content-center">
+              <div class="col-2"><img src="img/email-white-icon.png" alt="" /></div>
+              <div class="col-8 text-start">
+                <p>auto2000@gmail.com</p>
+              </div>
+            </div>
+            <div class="row mt-4 mb-2 fs-4 text-center justify-content-center">
+              <div class="col-2"><img src="img/call-white-icon.png" alt="" /></div>
+              <div class="col-8 text-start">
+                <p>08274645853</p>
+              </div>
+            </div>
+            <div class="row ps-5" style="margin-top: 50px">
+              <div class="col-2">
+                <a href="https://www.facebook.com/Auto2000official"><img src="img/fb-white-icon.png" alt="" /></a>
+              </div>
+              <div class="col-2">
+                <a href="https://twitter.com/Auto2000ID"><img src="img/twitter-white-icon.png" alt="" /></a>
+              </div>
+              <div class="col-2">
+                <a href="https://www.instagram.com/auto2000id/"><img src="img/ig-white-icon.png" alt="" /></a>
+              </div>
+              <div class="col-2">
+                <a href="https://api.whatsapp.com/send?phone=+6282289802000"><img src="img/wa-white-icon.png" alt="" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="box-white bg-white text-start" style="width: 100%">
+            <h2 class="pesan fw-bold" style="padding-top: 30px">Kirim Pesan</h2>
+            <form id="pesan" class="form-group" action="" onsubmit="return validateForm()">
+              <div class="row text-start mt-lg-5 mt-4">
+                <div class="col col-xl-5 col-lg-5 col-md-8 col-nama">
+                  <div class="row">
+                    <label for="nama" class="form-label fw-bold fs-4" style="color: #ff5353">Nama Lengkap</label>
+                  </div>
+                  <div class="row">
+                    <input type="text" class="form-control fw-bold fs-5" id="nama" required placeholder="Masukkan nama lengkap" aria-describedby="nama" style="border: none" />
+                    <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
+                  </div>
+                </div>
+                <div class="col col-xl-5 col-lg-5 col-md-8 col-nomor position-relative">
+                  <div class="row">
+                    <label for="no" class="form-label fw-bold fs-4" style="color: #ff5353">Nomor Hp</label>
+                  </div>
+                  <div class="row">
+                    <input type="tel" class="form-control fw-bold fs-5" id="no" required onkeyup="validateNum($('#no').val())" placeholder="Masukkan nomor hp" aria-describedby="no" style="border: none" />
+                    <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
+                  </div>
+                  <div class="row position-absolute" style="bottom: -30%; left: 5%">
+                    <span class="alert text-danger p-0" id="alertHp"></span>
+                    <br />
+                  </div>
+                </div>
+              </div>
+              <div class="row text-start mt-lg-4 mt-4">
+                <div class="col col-xl-5 col-lg-5 col-md-8 col-subjek">
+                  <div class="row">
+                    <label for="subjek" class="form-label fw-bold fs-4" style="color: #ff5353">Subjek</label>
+                  </div>
+                  <div class="row">
+                    <input type="text" class="form-control fw-bold fs-5" id="subjek" required placeholder="Masukkan subjek pesan" aria-describedby="subjek" style="border: none" />
+                    <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
+                  </div>
+                </div>
+                <div class="col col-xl-5 col-lg-5 col-md-8 col-email">
+                  <div class="row">
+                    <label for="email" class="form-label fw-bold fs-4" style="color: #ff5353">Email</label>
+                  </div>
+                  <div class="row">
+                    <input type="email" class="form-control fw-bold fs-5" id="email" required placeholder="Masukkan email" aria-describedby="email" style="border: none" />
+                    <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
+                  </div>
+                </div>
+              </div>
+              <div class="row text-start mt-lg-4 mt-4">
+                <div class="col col-xl-5 col-lg-5 col-md-8 col-alamat">
+                  <div class="row">
+                    <label for="alamat" class="form-label fw-bold fs-4" style="color: #ff5353">Alamat</label>
+                  </div>
+                  <div class="row">
+                    <input type="text" class="form-control fw-bold fs-5" id="alamat" required placeholder="Masukkan alamat" aria-describedby="alamat" style="border: none" />
+                    <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
+                  </div>
+                </div>
+                <div class="col col-xl-5 col-lg-5 col-md-8 col-kodepos">
+                  <div class="row">
+                    <label for="kodepos" class="form-label fw-bold fs-4" style="color: #ff5353">Kode Pos</label>
+                  </div>
+                  <div class="row">
+                    <input type="text" class="form-control fw-bold fs-5" id="kodepos" required placeholder="Masukkan kode pos" aria-describedby="kodepos" style="border: none" />
+                    <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
+                  </div>
+                </div>
+              </div>
+              <div class="row text-start mt-lg-4 mt-4">
+                <div class="col col-xl-5 col-lg-5 col-md-8 col-provinsi">
+                  <div class="row">
+                    <label for="provinsi" class="form-label fw-bold fs-4" style="color: #ff5353">Provinsi</label>
+                  </div>
+                  <div class="row">
+                    <select class="form-control fw-bold fs-5" id="provinsi" placeholder="Pilih provinsi" style="border: none">
+                      <option value="">Pilih Provinsi</option>
+                    </select>
+                    <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
+                  </div>
+                </div>
+                <div class="col col-xl-5 col-lg-5 col-md-8 col-kota">
+                  <div class="row">
+                    <label for="kota" class="form-label fw-bold fs-4" style="color: #ff5353">Kota</label>
+                  </div>
+                  <div class="row">
+                    <select class="form-control fw-bold fs-5" id="kota" placeholder="Masukkan kota" style="border: none">
+                      <option value=""></option>
+                    </select>
+                    <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
+                  </div>
+                </div>
+              </div>
+              <div class="row text-start mt-lg-4 mt-4">
+                <div class="col col-xl-11 col-lg-11 col-md-8 col-pesan">
+                  <div class="row">
+                    <label for="pesan" class="form-label fw-bold fs-4" style="color: #ff5353">Tulis Pesan Disini ...</label>
+                  </div>
+                  <div class="row">
+                    <textarea class="form-control fw-bold fs-5" id="subjek" required placeholder="Tulis pesan anda" rows="4" style="border: none"></textarea>
+                    <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
+                  </div>
+                </div>
+              </div>
+              <div class="row text-start mt-lg-4 mt-4">
+                <div class="col-12">
+                  <button type="submit" class="btn ps-4 pe-4 pb-2 pt-2 fs-4 text-white" style="background-color: #ff5353; border-radius: 10px">Kirim Pesan</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center d-md-none mt-5">
+        <div class="col-10">
+          <div class="bg-white text-start" style="padding: 35px; border-radius: 10px">
+            <h2 class="pesan fw-bold" style="">Kirim Pesan</h2>
+            <form id="pesan" action="">
+              <div class="row text-start mt-lg-5 mt-4">
+                <div class="col-sm-12 col-nama">
+                  <div class="row">
+                    <label for="nama" class="form-label fw-bold fs-4" style="color: #ff5353">Nama Lengkap</label>
+                  </div>
+                  <div class="row">
+                    <input type="text" class="form-control fw-bold fs-5" id="nama" placeholder="Masukkan nama lengkap" aria-describedby="nama" style="border: none" />
+                    <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
+                  </div>
+                </div>
+                <div class="col-sm-12 col-nomor">
+                  <div class="row">
+                    <label for="no" class="form-label fw-bold fs-4" style="color: #ff5353">Nomor Hp</label>
+                  </div>
+                  <div class="row">
+                    <input type="text" class="form-control fw-bold fs-5" id="no" onkeyup="validateNum($('#no').val())" placeholder="Masukkan nomor hp" aria-describedby="no" style="border: none" />
+                    <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
+                  </div>
+                  <div class="row position-absolute" style="bottom: -30%; left: 5%">
+                    <span class="alert text-danger p-0" id="alertHp"></span>
+                    <br />
+                  </div>
+                </div>
+              </div>
+              <div class="row text-start mt-lg-4">
+                <div class="col-sm-12 col-subjek">
+                  <div class="row">
+                    <label for="subjek" class="form-label fw-bold fs-4" style="color: #ff5353">Subjek</label>
+                  </div>
+                  <div class="row">
+                    <input type="text" class="form-control fw-bold fs-5" id="subjek" placeholder="Masukkan subjek pesan" aria-describedby="subjek" style="border: none" />
+                    <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
+                  </div>
+                </div>
+                <div class="col-sm-12 col-email">
+                  <div class="row">
+                    <label for="email" class="form-label fw-bold fs-4" style="color: #ff5353">Email</label>
+                  </div>
+                  <div class="row">
+                    <input type="email" class="form-control fw-bold fs-5" id="email" placeholder="Masukkan email" aria-describedby="email" style="border: none" />
+                    <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
+                  </div>
+                </div>
+              </div>
+              <div class="row text-start mt-lg-4">
+                <div class="col-sm-12 col-alamat">
+                  <div class="row">
+                    <label for="alamat" class="form-label fw-bold fs-4" style="color: #ff5353">Alamat</label>
+                  </div>
+                  <div class="row">
+                    <input type="text" class="form-control fw-bold fs-5" id="alamat" placeholder="Masukkan alamat" aria-describedby="alamat" style="border: none" />
+                    <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
+                  </div>
+                </div>
+                <div class="col-sm-12 col-kodepos">
+                  <div class="row">
+                    <label for="kodepos" class="form-label fw-bold fs-4" style="color: #ff5353">Kode Pos</label>
+                  </div>
+                  <div class="row">
+                    <input type="text" class="form-control fw-bold fs-5" id="kodepos" placeholder="Masukkan Kode Pos" aria-describedby="kodepos" style="border: none" />
+                    <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
+                  </div>
+                </div>
+              </div>
+              <div class="row text-start mt-lg-4">
+                <div class="col-sm-12 col-provinsi">
+                  <div class="row">
+                    <label for="provinsi" class="form-label fw-bold fs-4" style="color: #ff5353">Provinsi</label>
+                  </div>
+                  <div class="row">
+                    <select class="form-control fw-bold fs-5" id="provinsi" style="border: none">
+                      <option value="">Pilih Provinsi</option>
+                    </select>
+                    <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
+                  </div>
+                </div>
+                <div class="col-sm-12 col-kota">
+                  <div class="row">
+                    <label for="kota" class="form-label fw-bold fs-4" style="color: #ff5353">Kota</label>
+                  </div>
+                  <div class="row">
+                    <select class="form-control fw-bold fs-5" id="kota" style="border: none">
+                      <option value=""></option>
+                    </select>
+                    <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
+                  </div>
+                </div>
+              </div>
+              <div class="row text-start mt-lg-4">
+                <div class="col l-sm-12 col-pesan">
+                  <div class="row">
+                    <label for="pesan" class="form-label fw-bold fs-4" style="color: #ff5353">Tulis Pesan Disini ...</label>
+                  </div>
+                  <div class="row">
+                    <textarea class="form-control fw-bold fs-5" id="subjek" placeholder="Tulis pesan anda" aria-describedby="pesan" rows="4" style="border: none"></textarea>
+                    <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
+                  </div>
+                </div>
+              </div>
+              <div class="row text-start mt-lg-4 mt-4">
+                <div class="col-12">
+                  <button type="button" class="btn btn-primary ps-4 pe-4 pb-2 pt-2 fs-4 text-white" style="background-color: #ff5353; border-radius: 10px">Kirim Pesan</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center d-md-none mt-5">
+        <div class="col-10 text-white">
+          <div class="" style="background-color: #ff5353; border-radius: 10px; height: 387px">
+            <div class="row ps-5">
+              <div class="col-12 mt-5 ps-4 text-start">
+                <h2>Informasi Kontak</h2>
+              </div>
+            </div>
+            <div class="row mb-2 fs-4 text-center justify-content-center" style="margin-top: 30px">
+              <div class="col-2 pt-2"><img src="img/loc-white-icon.png" alt="" /></div>
+              <div class="col-8 text-start">
+                <p>Jl. Kenjeran No.522-524, Kalijudan, Kec. Mulyorejo, Kota SBY, Jawa Timur 60114</p>
+              </div>
+            </div>
+            <div class="row mt-4 mb-2 fs-4 text-center justify-content-center">
+              <div class="col-2"><img src="img/email-white-icon.png" alt="" /></div>
+              <div class="col-8 text-start">
+                <p>auto2000@gmail.com</p>
+              </div>
+            </div>
+            <div class="row mt-4 mb-2 fs-4 text-center justify-content-center">
+              <div class="col-2"><img src="img/call-white-icon.png" alt="" /></div>
+              <div class="col-8 text-start">
+                <p>0896-3124-2977</p>
+              </div>
+            </div>
+            <div class="row ps-5" style="margin-top: 50px">
+              <div class="col-2">
+                <a href="https://www.facebook.com/Auto2000official"><img src="img/fb-white-icon.png" alt="" /></a>
+              </div>
+              <div class="col-2">
+                <a href="https://twitter.com/Auto2000ID"><img src="img/twitter-white-icon.png" alt="" /></a>
+              </div>
+              <div class="col-2">
+                <a href="https://www.instagram.com/auto2000id/"><img src="img/ig-white-icon.png" alt="" /></a>
+              </div>
+              <div class="col-2">
+                <a href="https://api.whatsapp.com/send?phone=+6282289802000"><img src="img/wa-white-icon.png" alt="" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end contact us -->
+
+    <!-- contact footer -->
+    <div class="container-fluid pt-5" style="background-color: #fafafa; height: 100%">
+      <div class="container">
+        <div class="row d-md-flex justify-content-center">
+          <div class="invita-footer-col col-lg-2 col-md-3 col-sm-4 col-8 mb-5">
+            <a class="text-decoration-none text-black" href="#" style="font-size: 3.2rem"><img src="img/auto2000-logo.png" alt="" /></a>
+          </div>
+          <div class="about-footer-col col-lg-2 col-md-3 col-sm-4 col-8 mb-5">
+            <div class="row">
+              <h3>ABOUT</h3>
+            </div>
+            <div class="row">
+              <p>Auto2000 adalah e-commerce website untuk penjualan mobil, suku cadang, dan aksesoris.</p>
+            </div>
+          </div>
+          <div class="contact-footer-col col-lg-3 col-md-4 col-sm-6 col-8 text-lg-end text-center ms-lg-auto mb-5" style="height: 100%">
+            <a class="d-inline-block pe-4" href="https://www.facebook.com/Auto2000official"><img class="img-fluid" src="img/fb-black-icon.png" alt="" /></a>
+            <a class="d-inline-block pe-4" href="https://twitter.com/Auto2000ID"><img class="img-fluid" src="img/twitter-black-icon.png" alt="" /></a>
+            <a class="d-inline-block pe-4" href="https://www.instagram.com/auto2000id/"><img class="img-fluid" src="img/ig-black-icon.png" alt="" /></a>
+            <a class="d-inline-block" href="https://api.whatsapp.com/send?phone=+6282289802000"><img class="img-fluid" src="img/wa-black-icon.png" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end contact footer -->
+
+    <!-- footer -->
+    <div class="container-fluid footer" style="background-color: #ff5353">
+      <div class="container d-flex p-3">
+        <a href="#" class="me-auto p-2 text-decoration-none text-white fs-4">Copyright © 2021 Auto2000 All Right Reserved</a>
+        <a href="#" class="p-2 me-5 text-decoration-none text-white fs-4">Privacy Policy</a>
+        <a href="#" class="p-2 text-decoration-none text-white fs-4">Terms & Conditions</a>
+      </div>
+    </div>
+    <!-- end footer -->
+  </body>
+
+  <script>
+    let errHp = 0;
+
+    function validateForm() {
+      if (errHp == 0) return true;
+      return false;
+    }
+
+    function isNumeric(val) {
+      return /^-?\d+$/.test(val);
+    }
+
+    function validateNum(num) {
+      if (!isNumeric(num)) {
+        $('#alertHp').text('Nomor telepon hanya terdiri dari angka');
+        errHp = 1;
+      } else if (num.length < 11 || num.length > 12) {
+        $('#alertHp').text('Nomor telepon terdiri dari 11-12 digit');
+        errHp = 1;
+      } else {
+        $('#alertHp').text('');
+        errHp = 0;
+      }
+    }
+  </script>
+</html>
