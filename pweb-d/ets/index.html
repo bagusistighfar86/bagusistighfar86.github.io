@@ -21,7 +21,7 @@
     <!-- j-query -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
-  <body>
+  <body onload="loadProvinsi()">
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -317,7 +317,7 @@
                     <label for="no" class="form-label fw-bold fs-4" style="color: #ff5353">Nomor Hp</label>
                   </div>
                   <div class="row">
-                    <input type="tel" class="form-control fw-bold fs-5" id="no" required onkeyup="validateNum($('#no').val())" placeholder="Masukkan nomor hp" aria-describedby="no" style="border: none" />
+                    <input type="text" class="form-control fw-bold fs-5" id="no" required onkeyup="validateNum($('#no').val())" placeholder="Masukkan nomor hp" aria-describedby="no" style="border: none" />
                     <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
                   </div>
                   <div class="row position-absolute" style="bottom: -30%; left: 5%">
@@ -372,7 +372,7 @@
                     <label for="provinsi" class="form-label fw-bold fs-4" style="color: #ff5353">Provinsi</label>
                   </div>
                   <div class="row">
-                    <select class="form-control fw-bold fs-5" id="provinsi" placeholder="Pilih provinsi" style="border: none">
+                    <select class="form-control fw-bold fs-5" name="provinsi" id="provinsi" onchange="loadKabKota(document.getElementById('provinsi').value)" style="border: none">
                       <option value="">Pilih Provinsi</option>
                     </select>
                     <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
@@ -380,10 +380,10 @@
                 </div>
                 <div class="col col-xl-5 col-lg-5 col-md-8 col-kota">
                   <div class="row">
-                    <label for="kota" class="form-label fw-bold fs-4" style="color: #ff5353">Kota</label>
+                    <label for="kota" class="form-label fw-bold fs-4" style="color: #ff5353">Kabupaten/Kota</label>
                   </div>
                   <div class="row">
-                    <select class="form-control fw-bold fs-5" id="kota" placeholder="Masukkan kota" style="border: none">
+                    <select class="form-control fw-bold fs-5" id="kota" style="border: none">
                       <option value=""></option>
                     </select>
                     <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
@@ -414,23 +414,23 @@
         <div class="col-10">
           <div class="bg-white text-start" style="padding: 35px; border-radius: 10px">
             <h2 class="pesan fw-bold" style="">Kirim Pesan</h2>
-            <form id="pesan" action="">
+            <form id="pesan2" class="form-group" action="" onsubmit="return validateForm()">
               <div class="row text-start mt-lg-5 mt-4">
                 <div class="col-sm-12 col-nama">
                   <div class="row">
-                    <label for="nama" class="form-label fw-bold fs-4" style="color: #ff5353">Nama Lengkap</label>
+                    <label for="nama2" class="form-label fw-bold fs-4" style="color: #ff5353">Nama Lengkap</label>
                   </div>
                   <div class="row">
-                    <input type="text" class="form-control fw-bold fs-5" id="nama" placeholder="Masukkan nama lengkap" aria-describedby="nama" style="border: none" />
+                    <input type="text" class="form-control fw-bold fs-5" id="nama2" required placeholder="Masukkan nama lengkap" aria-describedby="nama" style="border: none" />
                     <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
                   </div>
                 </div>
                 <div class="col-sm-12 col-nomor">
                   <div class="row">
-                    <label for="no" class="form-label fw-bold fs-4" style="color: #ff5353">Nomor Hp</label>
+                    <label for="no2" class="form-label fw-bold fs-4" style="color: #ff5353">Nomor Hp</label>
                   </div>
                   <div class="row">
-                    <input type="text" class="form-control fw-bold fs-5" id="no" onkeyup="validateNum($('#no').val())" placeholder="Masukkan nomor hp" aria-describedby="no" style="border: none" />
+                    <input type="text" class="form-control fw-bold fs-5" id="no2" required onkeyup="validateNum($('#no2').val())" placeholder="Masukkan nomor hp" aria-describedby="no" style="border: none" />
                     <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
                   </div>
                   <div class="row position-absolute" style="bottom: -30%; left: 5%">
@@ -442,19 +442,19 @@
               <div class="row text-start mt-lg-4">
                 <div class="col-sm-12 col-subjek">
                   <div class="row">
-                    <label for="subjek" class="form-label fw-bold fs-4" style="color: #ff5353">Subjek</label>
+                    <label for="subjek2" class="form-label fw-bold fs-4" style="color: #ff5353">Subjek</label>
                   </div>
                   <div class="row">
-                    <input type="text" class="form-control fw-bold fs-5" id="subjek" placeholder="Masukkan subjek pesan" aria-describedby="subjek" style="border: none" />
+                    <input type="text" class="form-control fw-bold fs-5" id="subjek2" required placeholder="Masukkan subjek pesan" aria-describedby="subjek" style="border: none" />
                     <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
                   </div>
                 </div>
                 <div class="col-sm-12 col-email">
                   <div class="row">
-                    <label for="email" class="form-label fw-bold fs-4" style="color: #ff5353">Email</label>
+                    <label for="email2" class="form-label fw-bold fs-4" style="color: #ff5353">Email</label>
                   </div>
                   <div class="row">
-                    <input type="email" class="form-control fw-bold fs-5" id="email" placeholder="Masukkan email" aria-describedby="email" style="border: none" />
+                    <input type="email" class="form-control fw-bold fs-5" id="email2" required placeholder="Masukkan email" aria-describedby="email" style="border: none" />
                     <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
                   </div>
                 </div>
@@ -462,19 +462,19 @@
               <div class="row text-start mt-lg-4">
                 <div class="col-sm-12 col-alamat">
                   <div class="row">
-                    <label for="alamat" class="form-label fw-bold fs-4" style="color: #ff5353">Alamat</label>
+                    <label for="alamat2" class="form-label fw-bold fs-4" style="color: #ff5353">Alamat</label>
                   </div>
                   <div class="row">
-                    <input type="text" class="form-control fw-bold fs-5" id="alamat" placeholder="Masukkan alamat" aria-describedby="alamat" style="border: none" />
+                    <input type="text" class="form-control fw-bold fs-5" id="alamat2" required placeholder="Masukkan alamat" aria-describedby="alamat" style="border: none" />
                     <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
                   </div>
                 </div>
                 <div class="col-sm-12 col-kodepos">
                   <div class="row">
-                    <label for="kodepos" class="form-label fw-bold fs-4" style="color: #ff5353">Kode Pos</label>
+                    <label for="kodepos2" class="form-label fw-bold fs-4" style="color: #ff5353">Kode Pos</label>
                   </div>
                   <div class="row">
-                    <input type="text" class="form-control fw-bold fs-5" id="kodepos" placeholder="Masukkan Kode Pos" aria-describedby="kodepos" style="border: none" />
+                    <input type="text" class="form-control fw-bold fs-5" id="kodepos2" required placeholder="Masukkan kode pos" aria-describedby="kodepos" style="border: none" />
                     <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
                   </div>
                 </div>
@@ -482,10 +482,10 @@
               <div class="row text-start mt-lg-4">
                 <div class="col-sm-12 col-provinsi">
                   <div class="row">
-                    <label for="provinsi" class="form-label fw-bold fs-4" style="color: #ff5353">Provinsi</label>
+                    <label for="provinsi2" class="form-label fw-bold fs-4" style="color: #ff5353">Provinsi</label>
                   </div>
                   <div class="row">
-                    <select class="form-control fw-bold fs-5" id="provinsi" style="border: none">
+                    <select class="form-control fw-bold fs-5" name="provinsi2" id="provinsi2" onchange="loadKabKota(document.getElementById('provinsi2').value)" style="border: none">
                       <option value="">Pilih Provinsi</option>
                     </select>
                     <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
@@ -493,10 +493,10 @@
                 </div>
                 <div class="col-sm-12 col-kota">
                   <div class="row">
-                    <label for="kota" class="form-label fw-bold fs-4" style="color: #ff5353">Kota</label>
+                    <label for="kota2" class="form-label fw-bold fs-4" style="color: #ff5353">Kabupaten/Kota</label>
                   </div>
                   <div class="row">
-                    <select class="form-control fw-bold fs-5" id="kota" style="border: none">
+                    <select class="form-control fw-bold fs-5" id="kota2" style="border: none">
                       <option value=""></option>
                     </select>
                     <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
@@ -506,17 +506,17 @@
               <div class="row text-start mt-lg-4">
                 <div class="col l-sm-12 col-pesan">
                   <div class="row">
-                    <label for="pesan" class="form-label fw-bold fs-4" style="color: #ff5353">Tulis Pesan Disini ...</label>
+                    <label for="pesan2" class="form-label fw-bold fs-4" style="color: #ff5353">Tulis Pesan Disini ...</label>
                   </div>
                   <div class="row">
-                    <textarea class="form-control fw-bold fs-5" id="subjek" placeholder="Tulis pesan anda" aria-describedby="pesan" rows="4" style="border: none"></textarea>
+                    <textarea class="form-control fw-bold fs-5" id="pesan2" required placeholder="Tulis pesan anda" aria-describedby="pesan" rows="4" style="border: none"></textarea>
                     <hr style="color: #000000; opacity: 1; border: 1px solid; border-radius: 5px" />
                   </div>
                 </div>
               </div>
               <div class="row text-start mt-lg-4 mt-4">
                 <div class="col-12">
-                  <button type="button" class="btn btn-primary ps-4 pe-4 pb-2 pt-2 fs-4 text-white" style="background-color: #ff5353; border-radius: 10px">Kirim Pesan</button>
+                  <button type="submit" class="btn ps-4 pe-4 pb-2 pt-2 fs-4 text-white" style="background-color: #ff5353; border-radius: 10px">Kirim Pesan</button>
                 </div>
               </div>
             </form>
@@ -606,6 +606,7 @@
     <!-- end footer -->
   </body>
 
+  <!-- script jquery error no hp -->
   <script>
     let errHp = 0;
 
@@ -631,4 +632,44 @@
       }
     }
   </script>
+  <!-- end script jquery error no hp -->
+
+  <!-- script ajax loadProvinsi -->
+  <script>
+    function loadProvinsi() {
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function () {
+        const myObj = JSON.parse(this.responseText);
+        let html = '<option>Pilih Provinsi</option>';
+        let idx = 0;
+        for (let x of Object.keys(myObj)) {
+          html += '<option';
+          html += ` value='${idx}'>`;
+          html += x;
+          html += '</option>';
+          idx += 1;
+        }
+        document.getElementById('provinsi').innerHTML = html;
+      };
+      xhttp.open('GET', 'IndonesiaAPI.json', true);
+      xhttp.send();
+    }
+
+    function loadKabKota(idx) {
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function () {
+        const myObj = JSON.parse(this.responseText);
+        let html = '<option>Pilih Kabupaten/Kota</option>';
+        for (let x of Object.values(myObj)[idx]) {
+          html += '<option>';
+          html += x;
+          html += '</option>';
+        }
+        document.getElementById('kota').innerHTML = html;
+      };
+      xhttp.open('GET', 'IndonesiaAPI.json', true);
+      xhttp.send();
+    }
+  </script>
+  <!-- end script ajax loadProvinsi -->
 </html>
