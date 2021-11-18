@@ -1,10 +1,4 @@
 @media only screen and (max-width: 360px) {
-  .contact-us {
-    height: 160vh;
-  }
-  .row-hubungi {
-    padding-top: 30px;
-  }
   .invita-footer-col,
   .about-footer-col,
   .contact-footer-col {
@@ -12,24 +6,6 @@
   }
 }
 @media only screen and (min-width: 360px) {
-  .contact-us {
-    height: 160vh;
-  }
-  .btn-buat-undangan {
-    padding-bottom: 170px;
-  }
-  .bg-why {
-    display: none;
-  }
-  .row#indicators {
-    margin-top: 40px;
-  }
-  .review-home {
-    padding-bottom: 400px;
-  }
-  .row-hubungi {
-    padding-top: 30px;
-  }
   .invita-footer-col,
   .about-footer-col,
   .contact-footer-col {
@@ -37,120 +13,19 @@
   }
 }
 @media only screen and (min-width: 576px) {
-  .btn-buat-undangan {
-    padding-bottom: 170px;
-  }
-  .bg-why {
-    display: none;
-  }
-  .review-home {
-    padding-bottom: 350px;
-  }
 }
 
 @media only screen and (min-width: 768px) {
-  .contact-us {
-    height: 140vh;
-  }
-  .blue-contact {
-    left: 20px;
-    top: 45px;
-  }
-  .blue-box {
-    padding-bottom: 470px;
-  }
-  .white-contact {
-    margin-left: 200px;
-  }
-  .box-white {
-    margin-left: 100px;
-    padding-bottom: 50px;
-  }
-  h2.pesan {
-    margin-left: 160px;
-  }
-  form#pesan {
-    margin-left: 170px;
-  }
-  .row-hubungi {
-    padding-top: 100px;
-  }
   .invita-footer-col,
   .about-footer-col {
     text-align: start;
   }
 }
 @media only screen and (min-width: 992px) {
-  .contact-us {
-    height: 110vh;
-  }
-  .blue-contact {
-    left: 70px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .blue-box {
-    padding-bottom: 0;
-  }
-  .white-contact {
-    margin-left: 150px;
-  }
-  h2.pesan {
-    margin-left: 190px;
-  }
-  form#pesan {
-    margin-left: 200px;
-  }
-  .col-nomor,
-  .col-email,
-  .col-kodepos,
-  .col-kota {
-    margin-left: 30px;
-  }
-  .box-white {
-    margin-left: 80px;
-    height: 600px;
-  }
 }
 @media only screen and (min-width: 1200px) {
-  .blue-contact {
-    left: 100px;
-  }
-  .white-contact {
-    margin-left: 150px;
-  }
-  h2.pesan {
-    margin-left: 210px;
-  }
-  form#pesan {
-    margin-left: 220px;
-  }
-  .col-nomor,
-  .col-email,
-  .col-kodepos,
-  .col-kota {
-    margin-left: 50px;
-  }
-  .box-white {
-    margin-left: 70px;
-  }
 }
 @media only screen and (min-width: 1400px) {
-  .blue-contact {
-    left: 150px;
-  }
-  .white-contact {
-    margin-left: 100px;
-  }
-  h2.pesan {
-    margin-left: 260px;
-  }
-  form#pesan {
-    margin-left: 270px;
-  }
-  .box-white {
-    margin-left: 40px;
-  }
 }
 
 html {
@@ -176,17 +51,11 @@ h4{
 .nav-item .nav-line .line {
   display: none;
 }
-/* .nav-item:hover .nav-line .line {
-  display: block;
-} */
+
 
 .nav-item:hover .nav-line .line {
   display: block;
 }
-
-/* .item-nav:hover .nav-line {
-  display: block;
-} */
 
 section.jumbotron {
   /* height: 570px; */
@@ -218,76 +87,6 @@ button:hover {
   animation: bounce 1s;
 }
 
-.col-rekom .button {
-  position: absolute;
-  width: 95%;
-  top: 25%;
-  opacity: 0%;
-  transition: opacity 0.5s ease;
-}
-
-.col-rekom:hover {
-  transform: scale(1.2);
-  opacity: 100%;
-}
-
-.col-rekom:hover .button {
-  opacity: 100%;
-}
-
-.card-kategori {
-  cursor: pointer;
-  width: 150px;
-  height: 210px;
-  opacity: 100%;
-  transition: all 0.5s ease;
-}
-
-.card-kategori:hover {
-  transform: scale(1.2);
-  opacity: 75%;
-}
-
-.col-kemudahan {
-  opacity: 100%;
-}
-
-.row-text p {
-  cursor: pointer;
-  color: white;
-  transition: all 0.5s ease;
-}
-.row-text:hover p {
-  color: #ff5353;
-}
-
-.col-test i,
-.col-acs i {
-  cursor: pointer;
-  margin-left: 20px;
-  opacity: 0;
-  color: white;
-  transition: all 0.5s ease;
-}
-.row-text:hover .col-test i,
-.row-text:hover .col-acs i {
-  cursor: pointer;
-  margin-left: 60px;
-  opacity: 100%;
-  color: #ff5353;
-}
-
-.col-book i {
-  margin-left: 7px;
-  opacity: 0%;
-  color: white;
-  transition: all 0.5s ease;
-}
-.row-text:hover .col-book i {
-  margin-left: 20px;
-  opacity: 100%;
-  color: #ff5353;
-}
 
 :root{
   --background-dark: #2d3548;
