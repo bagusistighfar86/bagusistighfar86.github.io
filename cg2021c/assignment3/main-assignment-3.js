@@ -124,7 +124,7 @@ function main() {
 	// copying the first obj
 	var vertices_left = new Float32Array(vertices);
 
-	// rotating left object y-axis
+	// rotating left object y-axis +x -> +z ; -x -> -z ; -z -> x+ ; +z -> x-
 	const X_INDEX = 0;
 	const Z_INDEX = 2;
 	const X_INDEX_SURFACE = 6;
@@ -195,7 +195,7 @@ function main() {
 		box[it + 2] += box_center[2];
 	}
 
-	var cube_box = 24 * 3;
+	var cube_box = 24 * 4;
 	var box_index = [
 		// cube light
 		0 + cube_box, 1 + cube_box, 2 + cube_box,     0 + cube_box, 2 + cube_box, 3 + cube_box,     // Face A
@@ -279,7 +279,7 @@ function main() {
 
 	// controller section
   function changeBoxPos(xyz, mov) {
-		var index_start = 9 * 24 * 3;
+		var index_start = 9 * ( 24 * 4 + 20 );
 		for (var it = 0; it < box.length; it += 9) {
 			vertices[index_start + it + xyz] += mov;
 		}
@@ -440,16 +440,11 @@ function main() {
 		gl.uniform3fv(uViewerPosition, [cameraX, cameraY, cameraZ]);
 		var uModel = gl.getUniformLocation(currShader, "uModel");
 
-		// if (!freeze) {  // If it is not freezing, then animate the rectangle
-			// if (changeX >= 0.5 || changeX <= -0.5) speedX = -speedX;
-			// changeX = changeX + speedX;
-			// changeY = changeY + speedY;
-			var modelMatrix = glMatrix.mat4.create();
-			gl.uniformMatrix4fv(uModel, false, modelMatrix);
-			var normalModelMatrix = glMatrix.mat3.create();
-			glMatrix.mat3.normalFromMat4(normalModelMatrix, modelMatrix);
-			gl.uniformMatrix3fv(uNormalModel, false, normalModelMatrix);
-		// }
+		var modelMatrix = glMatrix.mat4.create();
+		gl.uniformMatrix4fv(uModel, false, modelMatrix);
+		var normalModelMatrix = glMatrix.mat3.create();
+		glMatrix.mat3.normalFromMat4(normalModelMatrix, modelMatrix);
+		gl.uniformMatrix3fv(uNormalModel, false, normalModelMatrix);
 
 		gl.enable(gl.DEPTH_TEST);
 		//transparency func
