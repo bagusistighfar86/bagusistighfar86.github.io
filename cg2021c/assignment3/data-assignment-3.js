@@ -42,6 +42,24 @@ var camera = {
   cube_b1_g : [0.3, 0.5, -0.15],
   cube_b1_h : [-0.1, 0.5, -0.15],
   
+  // lens_a1
+  lens_a1_i : [0.2, 0.35, 0.15],
+  lens_a1_j : [0.2, 0.35, -0.2],
+  lens_a1_k : [0.2, 0.1, 0.15],
+  lens_a1_l : [0.2, 0.1, -0.2],
+  lens_a1_m : [0.2, 0.3, 0.25],
+  lens_a1_n : [0.2, 0.15, 0.25],
+  lens_a1_o : [0.2, 0.3, -0.3],
+  lens_a1_p : [0.2, 0.15, -0.3],
+  
+  lens_a1_i2 : [0.6, 0.35, 0.15],
+  lens_a1_j2 : [0.6, 0.35, -0.2],
+  lens_a1_k2 : [0.6, 0.1, 0.15],
+  lens_a1_l2 : [0.6, 0.1, -0.2],
+  lens_a1_m2 : [0.6, 0.3, 0.25],
+  lens_a1_n2 : [0.6, 0.15, 0.25],
+  lens_a1_o2 : [0.6, 0.3, -0.3],
+  lens_a1_p2 : [0.6, 0.15, -0.3],
 }
 
 // color :)
@@ -153,11 +171,66 @@ var vertices = [
   ...camera.cube_b1_g, ...black3, ...yn,
   ...camera.cube_b1_h, ...black3, ...yn,
 
+  // lens a1 4*9 = 36
+  ...camera.lens_a1_m, ...black2, ...zp, //1
+  ...camera.lens_a1_m2, ...black1, ...zp, //2
+  ...camera.lens_a1_n2, ...black1, ...zp, //3
+  ...camera.lens_a1_n, ...black1, ...zp, //4
+  
+  ...camera.lens_a1_i, ...black1, ...yp, //5
+  ...camera.lens_a1_i2, ...black1, ...yp, //6
+  ...camera.lens_a1_m2, ...black1, ...yp, //7
+  ...camera.lens_a1_m, ...black1, ...yp, //8
+  
+  ...camera.lens_a1_n, ...black1, ...yn, //9
+  ...camera.lens_a1_n2, ...black1, ...yn, //10
+  ...camera.lens_a1_k2, ...black1, ...yn, //11
+  ...camera.lens_a1_k, ...black1, ...yn, //12
+  
+  ...camera.lens_a1_o, ...black1, ...zn, //13
+  ...camera.lens_a1_o2, ...black1, ...zn, //14
+  ...camera.lens_a1_p2, ...black1, ...zn, //15
+  ...camera.lens_a1_p, ...black1, ...zn, //16
+  
+  ...camera.lens_a1_j, ...black1, ...yp, //17
+  ...camera.lens_a1_j2, ...black1, ...yp, //18
+  ...camera.lens_a1_o2, ...black1, ...yp, //19
+  ...camera.lens_a1_o, ...black1, ...yp, //20
+  
+  ...camera.lens_a1_p, ...black1, ...yn, //21
+  ...camera.lens_a1_p2, ...black1, ...yn, //22
+  ...camera.lens_a1_l2, ...black1, ...yn, //23
+  ...camera.lens_a1_l, ...black1, ...yn, //24
 
+  ...camera.lens_a1_i, ...black1, ...yp, //25
+  ...camera.lens_a1_i2, ...black1, ...yp, //26
+  ...camera.lens_a1_j2, ...black1, ...yp, //27
+  ...camera.lens_a1_j, ...black1, ...yp, //28
+
+  ...camera.lens_a1_k, ...black1, ...yn, //29
+  ...camera.lens_a1_k2, ...black1, ...yn, //30
+  ...camera.lens_a1_l2, ...black1, ...yn, //31
+  ...camera.lens_a1_l, ...black1, ...yn, //32
+  
+  ...camera.lens_a1_i2, ...black1, ...xp, //33
+  ...camera.lens_a1_j2, ...black1, ...xp, //34
+  ...camera.lens_a1_o2, ...black1, ...xp, //35
+  ...camera.lens_a1_m2, ...black1, ...xp, //36
+
+  ...camera.lens_a1_n2, ...black1, ...xp, //37
+  ...camera.lens_a1_p2, ...black1, ...xp, //38
+  ...camera.lens_a1_l2, ...black1, ...xp, //39
+  ...camera.lens_a1_k2, ...black1, ...xp, //40
+
+  ...camera.lens_a1_m2, ...black1, ...xp, //41
+  ...camera.lens_a1_o2, ...black1, ...xp, //42
+  ...camera.lens_a1_p2, ...black1, ...xp, //43
+  ...camera.lens_a1_n2, ...black1, ...xp, //44
 ];
 
 var cube_a2_i = 24;
 var cube_b1_i = 24 * 2;
+var lens_a1_i = (24 * 3) ;
 
 var indices = [
   // cube a1
@@ -184,5 +257,17 @@ var indices = [
   12 + cube_b1_i, 13 + cube_b1_i, 14 + cube_b1_i,  12 + cube_b1_i, 14 + cube_b1_i, 15 + cube_b1_i,  // Face D
   16 + cube_b1_i, 17 + cube_b1_i, 18 + cube_b1_i,  16 + cube_b1_i, 18 + cube_b1_i, 19 + cube_b1_i,  // Face E
   20 + cube_b1_i, 21 + cube_b1_i, 22 + cube_b1_i,  20 + cube_b1_i, 22 + cube_b1_i, 23 + cube_b1_i,  // Face F 
-
+  
+  // lensa a1
+  0 + lens_a1_i, 1 + lens_a1_i, 2 + lens_a1_i,     0 + lens_a1_i, 2 + lens_a1_i, 3 + lens_a1_i,     // Face A
+  4 + lens_a1_i, 5 + lens_a1_i, 6 + lens_a1_i,     4 + lens_a1_i, 6 + lens_a1_i, 7 + lens_a1_i,     // Face B
+  8 + lens_a1_i, 9 + lens_a1_i, 10 + lens_a1_i,    8 + lens_a1_i, 10 + lens_a1_i, 11 + lens_a1_i,   // Face C
+  12 + lens_a1_i, 13 + lens_a1_i, 14 + lens_a1_i,  12 + lens_a1_i, 14 + lens_a1_i, 15 + lens_a1_i,  // Face D
+  16 + lens_a1_i, 17 + lens_a1_i, 18 + lens_a1_i,  16 + lens_a1_i, 18 + lens_a1_i, 19 + lens_a1_i,  // Face E
+  20 + lens_a1_i,  21 + lens_a1_i,  22 + lens_a1_i,  20 + lens_a1_i, 22 + lens_a1_i, 23 + lens_a1_i,  // Face F 
+  24 + lens_a1_i, 25 + lens_a1_i, 26 + lens_a1_i,  24 + lens_a1_i, 26 + lens_a1_i, 27 + lens_a1_i,  // Face G
+  28 + lens_a1_i, 29 + lens_a1_i, 30 + lens_a1_i,  28 + lens_a1_i, 30 + lens_a1_i, 31 + lens_a1_i,  // Face E
+  32 + lens_a1_i, 33 + lens_a1_i, 34 + lens_a1_i,  32 + lens_a1_i, 34 + lens_a1_i, 35 + lens_a1_i,  // Face F 
+  36 + lens_a1_i, 37 + lens_a1_i, 38 + lens_a1_i,  36 + lens_a1_i, 38 + lens_a1_i, 39 + lens_a1_i,  // Face G
+  40 + lens_a1_i, 41 + lens_a1_i, 42 + lens_a1_i,  40 + lens_a1_i, 42 + lens_a1_i, 43 + lens_a1_i,  // Face E
 ];
