@@ -271,3 +271,29 @@ var indices = [
   36 + lens_a1_i, 37 + lens_a1_i, 38 + lens_a1_i,  36 + lens_a1_i, 38 + lens_a1_i, 39 + lens_a1_i,  // Face J
   40 + lens_a1_i, 41 + lens_a1_i, 42 + lens_a1_i,  40 + lens_a1_i, 42 + lens_a1_i, 43 + lens_a1_i,  // Face K
 ];
+
+// color - nrp = #049049
+/**
+ * 04 / EE -> R
+ * 90 / EE -> G
+ * 49 / EE -> B
+ * 
+ * decimal ver
+ * 4 / 255
+ * (90)H -> 9*16 + 0*1 = (144)D / 255
+ * (49)H -> 4*16 + 9*1 = (73)D / 255
+ * 
+ * color in RGB
+ * 5.0/255.0 , 144.0/255.0, 73.0/255.0
+ */
+var plane_color = [4.0/255.0 , 144.0/255.0, 73.0/255.0];
+var plane = [
+  20.0, -0.3, 20.0,  ...plane_color, ...yp,
+  20.0, -0.3, -20.0, ...plane_color, ...yp,
+  -20.0, -0.3, -20.0, ...plane_color, ...yp,
+  -20.0, -0.3, 20.0, ...plane_color, ...yp,
+];
+
+var indices_place = [
+  0, 1, 2,     0, 2, 3,    
+];
