@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Add Book JQuery</title>
+</head>
+<body style="overflow: hidden;">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top p-3">
+        <div class="container">
+        <a class="navbar-brand" href="index.html"> Latihan JQuery </a>
+        </div>
+    </nav>
+    <!-- end navbar -->
+
+    <div class="main d-flex justify-content-center align-items-center" style="height: 100vh">
+        <div class="container">
+            <div class="row justify-content-center text-center text-white">
+                <h1 class="text-center my-3">Simple App with JQuery</h1>
+            </div>
+            <div class="row justify-content-center text-center">
+                <div class="container p-2 card" style="max-width: 45rem;">
+                    <h1 class="text-center my-3">Input new Book to the List</h1>
+                    <div class="row">
+                        <div class="col text-center my-3">
+                        <form name="my-form">
+                            <div class="input-group">
+                                <label class="label">Book Title</label>&emsp;
+                                <input class="input-style" type="text" name="titleBook" id="titleBook">
+                            </div>
+
+                            <div class="input-group">
+                                <label class="label">Book List</label>&emsp;
+                                <div class="select-wrapper">
+                                    <select name="listBook" id="listBook" class="select-style">
+                                        <option selected="selected" disabled="disabled" value="">Pilih</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <input class="btn-primary" id="btnAdd" type="button" value="Tambah">
+                            </div>
+                        </form>
+                            <input type="button" value="Kembali" onclick="window.location.href='./index.html'" class="btn btn-success my-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#btnAdd').click(function () {
+                var newBook = $('#titleBook').val();
+                
+                if (newBook == "") {
+                    return;
+                }
+
+                else {
+                    $('#listBook').append(new Option(newBook, newBook));
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
